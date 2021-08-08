@@ -4,8 +4,13 @@ const path=require('path');
 const addrcontroller = require('../controllers/addressBookController');
 const router=express.Router();
 
-//controller calling
 
+//Index Route
+router.get('/',(req,res)=>{
+    res.sendFile(path.join(__dirname, '../public', 'index.html'));
+});
+
+//controller calling
 //To create contact via html form
 router.get('/create',(req,res)=>{
     res.sendFile(path.join(__dirname, '../public', 'create-contact.html'));

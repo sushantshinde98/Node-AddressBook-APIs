@@ -19,5 +19,6 @@ mongoose.connect(config.mongoURL,{useNewUrlParser: true,
     
 //router
 app.use('/api',router);
+app.use('/',router);
 
 app.listen(Port,host,()=>{console.log(`AddressBook running at port ${Port}`)});
