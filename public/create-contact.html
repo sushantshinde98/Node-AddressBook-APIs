@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Contact</title>
+    <style>
+        .container{
+            position: relative;
+            top: 50px;
+            margin: 0 auto;
+            border: solid gray;
+        }
+        .row{
+          margin: 8px;
+        }
+        .btn{
+         position:relative;
+         left:55%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <form action="/api/create-contact" method="POST">
+        <h3 class="jumbotron">Create Contact for AddressBook</h3>
+        <div class="mb-3 row">
+          <label for="firstName" class="col-sm-2 col-form-label">First Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="fname" required>
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="lastName" class="col-sm-2 col-form-label">Last Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="lname" required>
+          </div>
+        </div>
+      <div class="mb-3 row">
+        <label for="address" class="col-sm-2 col-form-label">Address</label>
+        <div class="col-sm-10">
+          <textarea name="address" id="" cols="80" rows="3" required></textarea>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="city" class="col-sm-2 col-form-label">City</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="city" required>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="state" class="col-sm-2 col-form-label">State</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="state" required>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="mobile" class="col-sm-2 col-form-label">Mobile</label>
+        <div class="col-sm-10">
+          <input type="phone" class="form-control" name="mobile" maxlength="10" required>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="email" class="col-sm-2 col-form-label">Email ID</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" name="email" required>
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <div class="col-sm-10">
+          
+          <button type="submit" class="btn btn-info">Submit</button>
+        </div>
+      </div>
+    </form>
+      </div>
+      <script>
+        document.querySelector('form').addEventListener('submit',()=>{
+          alert('Response Submitted!')
+        })
+      </script>
+</body>
+</html>

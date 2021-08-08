@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            position: relative;
+            top: 10px;
+            bottom: 20px;
+            margin: 0 auto;
+            /* text-align: center; */
+        }
+        .alert{
+            font-size: medium;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h1 class="display-3">Welcome To AddressBook!</h1>
+        <p class="lead">A simple addressbook using nodejs, where you can use the following endpoints to check API's output.</p>
+    </div>
+
+    <div class="container">
+          <div class="alert alert-success" role="alert">
+            <b>To create conatct by post use this syntax: <a href="#" style="color:black" class="alert-link"> /api/create-contact </a> Give it a try.</b><br/>
+            <b>you can also use GUI form to create contact via:/api/create</b>
+          </div>
+          <div class="alert alert-success" role="alert">
+            <b>To fetch all contact list with phase{name|city|state} match and limit result using pagination:<a href="#" style="color:black" class="alert-link">/api/fetch/:phaseName/:limitCount/:pageNo</a> Give it a try.</b>
+          </div>
+          <div class="alert alert-warning" role="alert">
+           <b>To delete single contact use:<a href="#" style="color:black" class="alert-link">/api/delete-single/:id</a>.Give it a try</b>
+          </div>
+          <div class="alert alert-info" role="alert">
+            <b>To fetch single contact from adressbook:<a href="#" style="color:black" class="alert-link">/api/fetch-single/:id</a>. Give it a try</b>
+          </div>
+          <div class="alert alert-success" role="alert">
+            <b>To fetch all contact list from  adressbook:<a href="#" style="color:black" class="alert-link">/api/fetchall</a>. Give it a try</b>
+          </div>
+          
+    </div>
+</body>
+</html>
