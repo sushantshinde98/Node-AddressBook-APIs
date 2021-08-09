@@ -1,16 +1,11 @@
 const express=require('express');
-const mongoose=require('mongoose');
 const path=require('path');
 const addrcontroller = require('../controllers/addressBookController');
 const router=express.Router();
 
 
-//Index Route
-router.get('/',(req,res)=>{
-    res.sendFile(path.join(__dirname, '../public', 'index.html'));
-});
+//controller calling-Routes
 
-//controller calling
 //To create contact via html form
 router.get('/create',(req,res)=>{
     res.sendFile(path.join(__dirname, '../public', 'create-contact.html'));
